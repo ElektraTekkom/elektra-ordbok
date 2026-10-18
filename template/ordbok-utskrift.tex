@@ -1,0 +1,40 @@
+% Booklet for printing: two A5 pages side by side on landscape A4, in booklet order
+% and padded with blank pages to a multiple of 4. Every sheet is upright.
+% Print double-sided with "flip on short edge", fold the stack in the middle and staple.
+\documentclass{article}
+\usepackage[a4paper,landscape]{geometry}
+\usepackage{pdfpages}
+
+\pdfximage{ordbok-a5.pdf}
+\edef\ordbokpages{\the\pdflastximagepages}
+
+\ExplSyntaxOn
+% Sheet i (0-based) of n padded pages: front = n-2i, 2i+1; back = 2i+2, n-2i-1.
+% Pages past the end of the document become blank pages ({} in pdfpages).
+\int_new:N \l_ordbok_n_int
+\int_new:N \l_ordbok_i_int
+\tl_new:N \l_ordbok_pages_tl
+\cs_new_protected:Npn \ordbok_add:n #1
+  {
+    \tl_if_empty:NF \l_ordbok_pages_tl { \tl_put_right:Nn \l_ordbok_pages_tl { , } }
+    \int_compare:nNnTF { #1 } > { \ordbokpages }
+      { \tl_put_right:Nn \l_ordbok_pages_tl { {} } }
+      { \tl_put_right:Nx \l_ordbok_pages_tl { \int_eval:n { #1 } } }
+  }
+\int_set:Nn \l_ordbok_n_int { \int_div_truncate:nn { \ordbokpages + 3 } { 4 } * 4 }
+\int_step_inline:nnn { 0 } { \l_ordbok_n_int / 4 - 1 }
+  {
+    \ordbok_add:n { \l_ordbok_n_int - 2 * #1 }
+    \ordbok_add:n { 2 * #1 + 1 }
+    \ordbok_add:n { 2 * #1 + 2 }
+    \ordbok_add:n { \l_ordbok_n_int - 2 * #1 - 1 }
+  }
+\cs_new_protected:Npn \ordbok_include:n #1
+  { \typeout { Booklet~order:~#1 } \includepdf [ pages = { #1 } , nup = 2x1 ] { ordbok-a5.pdf } }
+\cs_generate_variant:Nn \ordbok_include:n { V }
+\cs_new_protected:Npn \ordbokinclude { \ordbok_include:V \l_ordbok_pages_tl }
+\ExplSyntaxOff
+
+\begin{document}
+\ordbokinclude
+\end{document}

@@ -1,0 +1,77 @@
+name: Bygg og publiser ordboka
+
+# Every push to main builds the PDFs and uploads them to the release "ordbok", where
+# the website picks them up:
+#   https://github.com/<repo>/releases/download/ordbok/ordbok.pdf
+#   https://github.com/<repo>/releases/download/ordbok/ordbok-utskrift.pdf
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ordbok-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # "Sist oppdatert" = last commit touching ord/
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sjekk ordene
+        run: python build.py --check
+
+      - name: Lag LaTeX
+        run: python build.py --tex-only
+
+      - name: Kompiler PDF-er
+        uses: xu-cheng/latex-action@v3
+        with:
+          # same order as ROOT_FILES in build.py: the booklet needs ordbok-a5.pdf
+          root_file: |
+            ordbok.tex
+            ordbok-a5.tex
+            ordbok-utskrift.tex
+          working_directory: build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ordbok-pdf
+          path: |
+            build/ordbok.pdf
+            build/ordbok-utskrift.pdf
+
+  publish:
+    needs: build
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ordbok-publish  # never cancel an upload halfway
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ordbok-pdf
+
+      - name: Last opp til utgivelsen «ordbok»
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if ! gh release view ordbok >/dev/null 2>&1; then
+            gh release create ordbok --target "$GITHUB_SHA" --title "Elektra-ordboka" \
+              --notes "Siste versjon av ordboka. PDF-ene her byttes ut automatisk hver gang main endres."
+          fi
+          gh release upload ordbok ordbok.pdf ordbok-utskrift.pdf --clobber

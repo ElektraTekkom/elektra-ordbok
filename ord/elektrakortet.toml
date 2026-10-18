@@ -1,0 +1,10 @@
+ord = "Elektrakortet"
+nynorsk = "Elektra kortu"
+stikkord = "Heidis free pass"
+definisjon = """
+Elektra har til enhver tid flere kort som disponerer linjeforeningens
+midler. Dette er for å lett kunne kjøpe inn ting i butikk og på nett.
+Dessverre hender det at kortet misbrukes på alkoholholdige drikker på
+[[Heidis]] eller andre steder. Stort sett av
+[[verkstedmedlemmer|verkstedet-ev]].
+"""

@@ -1,0 +1,9 @@
+ord = "PILK"
+nynorsk = "Pjølk"
+stikkord = "Delikatesse"
+definisjon = """
+PILK er en delikatesse oppfunnet av [[verkstedet|verkstedet-ev]]. Det består
+ganske enkelt av et glass melk blandet med pepsi. Har blitt en meme over
+hele verden, men dette var noe verkstedet av en eller annen grunn greide å
+komme opp med på egenhånd.
+"""

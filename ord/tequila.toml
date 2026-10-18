@@ -1,0 +1,9 @@
+ord = "Tequila"
+nynorsk = "Mexicans Ildvatn"
+stikkord = "Fyllesyke på resept"
+definisjon = """
+Tequila er selvfølgelig den mexicanske brennevinen laget av agaveplanten.
+Var favoritt blant [[HS|hovedstyret-hs]] en periode og 'Hva er ditt forhold
+til Tequila?' var et standard spørsmål når det skulle velges nye
+styremedlemmer.
+"""

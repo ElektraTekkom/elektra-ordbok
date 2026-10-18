@@ -1,0 +1,11 @@
+build/
+__pycache__/
+
+# LaTeX temporary files (e.g. when compiling inside template/)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex*
+*.toc

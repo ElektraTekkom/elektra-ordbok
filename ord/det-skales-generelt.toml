@@ -1,0 +1,9 @@
+ord = "Det skåles generelt"
+nynorsk = "Det skålast generelt"
+stikkord = "Skål"
+definisjon = """
+Skål der hvem som helst kan rope «Det skåles generelt!», hvorpå resten
+svarer «Altfor lite!» og alle drikker. Brukes når det ikke finnes noen god
+grunn til å skåle, noe som i praksis vil si hele kvelden. Fungerer overalt,
+fra vors til [[immeball]] og lunsj på [[Kontoret]].
+"""

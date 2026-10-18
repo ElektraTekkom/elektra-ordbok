@@ -1,0 +1,10 @@
+ord = "Bedkom"
+nynorsk = "Bedkjem"
+stikkord = "Pengemaskin"
+definisjon = """
+Komiteen som får bedrifter til å betale for at studenter skal spise pizza og
+late som de er interessert i trafostasjoner. Eneste komiteen i Elektra som
+faktisk tjener penger, noe [[økonomiansvarlig]] minner alle andre komiteer
+på ved enhver anledning. Tradisjonen tilsier at man møter opp på bedpres,
+spiser tre stykker pizza og forsvinner før minglinga.
+"""

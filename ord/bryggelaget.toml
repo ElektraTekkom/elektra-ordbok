@@ -1,0 +1,9 @@
+ord = "Bryggelaget"
+nynorsk = "Bryggjelaget"
+stikkord = "Gjæringsprosjekt"
+definisjon = """
+En gjeng medlemmer som har bestemt seg for at øl fra butikken er for enkelt.
+Brygger egen øl med varierende hell, og hver eneste batch presenteres som
+"den beste til nå". Smaker som regel litt av eddik og veldig mye av
+stolthet.
+"""

@@ -1,0 +1,9 @@
+ord = "Berging"
+nynorsk = "Bjerging"
+stikkord = "Lovlig tyveri"
+definisjon = """
+Å stjele noe fra en annen linjeforenings kontor, pimpe det opp og gi det
+tilbake som [[styregave]] senere. Elektra var i sin tid så ivrige på dette
+at linjeforeningene så seg nødt til å bli enige om "bergingsreglene" for å
+unngå det i framtiden.
+"""

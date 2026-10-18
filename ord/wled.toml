@@ -1,0 +1,8 @@
+ord = "WLED"
+nynorsk = "Vledd"
+stikkord = "Lifehack"
+definisjon = """
+Programvaren brukt til å styre samtlige 20-ish LED-striper på [[kontoret]].
+Standard metode for å vinne beste [[styregave]], bare legg inn
+"Colortwinkles" og si at du har progga det selv.
+"""

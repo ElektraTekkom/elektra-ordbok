@@ -1,0 +1,12 @@
+ord = "Lambo"
+nynorsk = "Lambi"
+stikkord = "Drikkevise"
+definisjon = """
+Lambo er en drikkevise med lange og dype tradisjoner i Trondheim. Visen er
+mer en musikalsk form for drikkepress der et offer først velges ut. En eller
+flere starter da på drikkevisen der verset varer helt til offeret har
+drukket opp drikken sin. Offeret skal da svare med et eget vers og vende den
+tomme drikkebeholderen over hodet. Dette som bevis på at alt er drukket opp.
+I den ekstreme versjonen av teksten går visen videre til alle i rommet, men
+ofte legger man den død etter en runde.
+"""

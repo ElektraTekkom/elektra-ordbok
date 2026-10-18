@@ -1,0 +1,10 @@
+ord = "Av med buksene"
+nynorsk = "Av med buksane"
+stikkord = "Tradisjon"
+definisjon = """
+En gammel og fast tradisjon blant alle linjeforeninger i Trondheim. Dersom
+en person er på scenen under hvilket som helst ball, for hvilken som helst
+grunn, er det vanlig at salen synger "Av med buksene" gjentatte ganger.
+Dette helt til personen tar av seg buksene. Et umenneskelig press å skulle
+stå imot, så de fleste blir stående på scenen i bokseren.
+"""

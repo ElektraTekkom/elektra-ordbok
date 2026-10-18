@@ -1,0 +1,9 @@
+ord = "Tek-kom"
+nynorsk = "Tek-kjem"
+stikkord = "Brukerstøtte"
+definisjon = """
+Komiteen som drifter nettsiden og alt annet i Elektra som har en ledning.
+Får kun henvendelser når noe er ødelagt, og da gjerne i form av "funker
+ikke" uten flere detaljer. Består av folk som kan forklare hva en server er,
+men ingen spør.
+"""

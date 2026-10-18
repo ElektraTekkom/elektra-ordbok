@@ -1,0 +1,11 @@
+ord = "Kaffeopprøret"
+nynorsk = "Kaffeopprøri"
+stikkord = "Folkeaksjon"
+definisjon = """
+Kaffeopprøret var en kortvarig, men intens folkeaksjon utført av anonyme
+aktører. Aksjonen gikk ut på å henge opp lapper ved kaffetrakteren som
+krevde at kaffen skulle bli sterkere. Nærmere bestemt at skjemengden skulle
+økes fra 2 til 3 skjeer. Denne aksjonen ble fort beseiret da et annet medlem
+argumenterte med at dette ville føre til at gruten renner over ned i kanna.
+Standarden for skjemengde forble uendret.
+"""

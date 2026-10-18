@@ -1,0 +1,11 @@
+ord = "Bestfriendcard"
+nynorsk = "Bestevenkort"
+stikkord = "Statussymbol"
+definisjon = """
+Kort som alle styremedlemmer i Elektra får, som gir rabatt og gratis inngang
+forbi køen på [[Heidis]]. Regnes blant mange som det egentlige frynsegodet
+ved å sitte i styret. Brukes flittig, og det er ikke uvanlig at
+styremedlemmer havner på Heidis bare fordi kortet ligger i lommeboka. Må
+ikke forveksles med [[Elektrakortet]], selv om begge i praksis ender opp med
+å bli brukt på samme sted.
+"""
